@@ -1,0 +1,13 @@
+%tensorflow_version 2.x
+import tensorflow as tf
+print(tf.version)
+
+t = tf.zeros([5, 5, 5, 5]) 
+# In order to find the total amount of elements, we multiply all the 5s by eachother, getting a result of 625
+print(t)
+
+t = tf.reshape(t, [125, -1])
+print(t)
+
+t = tf.reshape(t, [625])
+print(t)
